@@ -1,0 +1,160 @@
+{
+    "version": "0",
+    "id": "b353c417-1eab-12f2-da99-3d3e36bfb66f",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.ec2",
+    "account": "355444550188",
+    "time": "2020-02-26T15:49:19Z",
+    "region": "eu-central-1",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.05",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAVHDGUMWPJW6SUVDWP",
+            "arn": "arn:aws:iam::483956q86333:user/keresztesa",
+            "accountId": "483956q86333",
+            "accessKeyId": "AKIAVHDNVBKMWPJRGUMWPJ4H",
+            "userName": "keresztesa"
+        },
+        "eventTime": "2020-02-26T15:49:19Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "RunInstances",
+        "awsRegion": "eu-central-1",
+        "sourceIPAddress": "87.141.132.26",
+        "userAgent": "aws-cli/1.18.2 Python/3.8.1 Windows/10 botocore/1.15.2",
+        "requestParameters": {
+            "instancesSet": {
+                "items": [
+                    {
+                        "imageId": "ami-0df0ada90913e7600",
+                        "minCount": 1,
+                        "maxCount": 1,
+                        "keyName": "keresztesa_keypair"
+                    }
+                ]
+            },
+            "instanceType": "t2.micro",
+            "blockDeviceMapping": {},
+            "monitoring": {
+                "enabled": "false"
+            },
+            "disableApiTermination": "false"
+        },
+        "responseElements": {
+            "requestId": "aab19d04-3b4c-4d2e-8234-4760a7462db",
+            "reservationId": "r-0a52d6b8762fce67a",
+            "ownerId": "483956q86333",
+            "groupSet": {},
+            "instancesSet": {
+                "items": [
+                    {
+                        "instanceId": "i-04a021a66e28ba722",
+                        "imageId": "ami-000ad0de76913f0a9",
+                        "instanceState": {
+                            "code": 0,
+                            "name": "pending"
+                        },
+                        "privateDnsName": "ip-152-41-33-91.eu-central-1.compute.internal",
+                        "keyName": "keresztesa_keypair",
+                        "amiLaunchIndex": 0,
+                        "productCodes": {},
+                        "instanceType": "t2.micro",
+                        "launchTime": 1582732159000,
+                        "placement": {
+                            "availabilityZone": "eu-central-1b",
+                            "tenancy": "default"
+                        },
+                        "monitoring": {
+                            "state": "disabled"
+                        },
+                        "subnetId": "subnet-330767ec",
+                        "vpcId": "vpc-534fe93a",
+                        "privateIpAddress": "152.41.34.91",
+                        "stateReason": {
+                            "code": "pending",
+                            "message": "pending"
+                        },
+                        "architecture": "x86_64",
+                        "rootDeviceType": "ebs",
+                        "rootDeviceName": "/dev/xvda",
+                        "blockDeviceMapping": {},
+                        "virtualizationType": "hvm",
+                        "hypervisor": "xen",
+                        "groupSet": {
+                            "items": [
+                                {
+                                    "groupId": "sg-32356b7f",
+                                    "groupName": "default"
+                                }
+                            ]
+                        },
+                        "sourceDestCheck": "true",
+                        "networkInterfaceSet": {
+                            "items": [
+                                {
+                                    "networkInterfaceId": "eni-0890f85f2eefde11f",
+                                    "subnetId": "subnet-077336ec",
+                                    "vpcId": "vpc-5e934f3a",
+                                    "ownerId": "483956q86333",
+                                    "status": "in-use",
+                                    "macAddress": "04:71:aa:7e:4f:a6",
+                                    "privateIpAddress": "152.41.32.33",
+                                    "privateDnsName": "ip-152-41-32-33.eu-central-1.compute.internal",
+                                    "sourceDestCheck": "true",
+                                    "interfaceType": "interface",
+                                    "groupSet": {
+                                        "items": [
+                                            {
+                                                "groupId": "sg-36b73256b73f",
+                                                "groupName": "default"
+                                            }
+                                        ]
+                                    },
+                                    "attachment": {
+                                        "attachmentId": "eni-attach-0d11fa6a9fa6a8811fa6a9fbfa6add784",
+                                        "deviceIndex": 0,
+                                        "status": "attaching",
+                                        "attachTime": 1582732159000,
+                                        "deleteOnTermination": "true"
+                                    },
+                                    "privateIpAddressesSet": {
+                                        "item": [
+                                            {
+                                                "privateIpAddress": "152.41.32.33",
+                                                "privateDnsName": "ip-152-41-32-33.eu-central-1.compute.internal",
+                                                "primary": "true"
+                                            }
+                                        ]
+                                    },
+                                    "ipv6AddressesSet": {},
+                                    "tagSet": {}
+                                }
+                            ]
+                        },
+                        "ebsOptimized": "false",
+                        "cpuOptions": {
+                            "coreCount": 1,
+                            "threadsPerCore": 1
+                        },
+                        "capacityReservationSpecification": {
+                            "capacityReservationPreference": "open"
+                        },
+                        "enclaveOptions": {
+                            "enabled": "false"
+                        },
+                        "metadataOptions": {
+                            "state": "pending",
+                            "httpTokens": "optional",
+                            "httpPutResponseHopLimit": 1,
+                            "httpEndpoint": "enabled"
+                        }
+                    }
+                ]
+            }
+        },
+        "requestID": "aab9d014-3bec-4d2e-8ba4-4760a3efd3db",
+        "eventID": "c5274432736-87f3-64a1-81b2-fa3eda676c33",
+        "eventType": "AwsApiCall"
+    }
+}

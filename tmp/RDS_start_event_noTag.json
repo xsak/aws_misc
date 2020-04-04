@@ -1,0 +1,129 @@
+{
+    "version": "0",
+    "id": "06a7da98-fc42-64bf-5fd9-d1f8417db01d",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.rds",
+    "account": "358845015454",
+    "time": "2020-02-27T12:57:13Z",
+    "region": "eu-central-1",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.05",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAVHDGUMWPJW6SUVDWP",
+            "arn": "arn:aws:iam::358845015454:user/keresztesa",
+            "accountId": "358845015454",
+            "accessKeyId": "ASIAVHDGUMWPFFY57TW6",
+            "userName": "keresztesa",
+            "sessionContext": {
+                "attributes": {
+                    "mfaAuthenticated": "true",
+                    "creationDate": "2020-02-27T08:15:38Z"
+                }
+            },
+            "invokedBy": "signin.amazonaws.com"
+        },
+        "eventTime": "2020-02-27T12:57:13Z",
+        "eventSource": "rds.amazonaws.com",
+        "eventName": "CreateDBInstance",
+        "awsRegion": "eu-central-1",
+        "sourceIPAddress": "88.151.102.26",
+        "userAgent": "signin.amazonaws.com",
+        "requestParameters": {
+            "dBInstanceIdentifier": "temporary-instance-1",
+            "dBInstanceClass": "db.t2.small",
+            "engine": "aurora",
+            "dBSubnetGroupName": "default",
+            "dBParameterGroupName": "default.aurora5.6",
+            "engineVersion": "5.6.10a",
+            "autoMinorVersionUpgrade": true,
+            "publiclyAccessible": false,
+            "dBClusterIdentifier": "temporary",
+            "monitoringInterval": 60,
+            "monitoringRoleArn": "arn:aws:iam::358845015454:role/rds-monitoring-role",
+            "enablePerformanceInsights": false
+        },
+        "responseElements": {
+            "dBInstanceIdentifier": "temporary-instance-1",
+            "dBInstanceClass": "db.t2.small",
+            "engine": "aurora",
+            "dBInstanceStatus": "creating",
+            "masterUsername": "admin",
+            "allocatedStorage": 1,
+            "preferredBackupWindow": "02:30-03:00",
+            "backupRetentionPeriod": 1,
+            "dBSecurityGroups": [],
+            "vpcSecurityGroups": [
+                {
+                    "vpcSecurityGroupId": "sg-36b7325f",
+                    "status": "active"
+                }
+            ],
+            "dBParameterGroups": [
+                {
+                    "dBParameterGroupName": "default.aurora5.6",
+                    "parameterApplyStatus": "in-sync"
+                }
+            ],
+            "dBSubnetGroup": {
+                "dBSubnetGroupName": "default",
+                "dBSubnetGroupDescription": "default",
+                "vpcId": "vpc-534fe93a",
+                "subnetGroupStatus": "Complete",
+                "subnets": [
+                    {
+                        "subnetIdentifier": "subnet-0eef5a67",
+                        "subnetAvailabilityZone": {
+                            "name": "eu-central-1a"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    },
+                    {
+                        "subnetIdentifier": "subnet-07e3367c",
+                        "subnetAvailabilityZone": {
+                            "name": "eu-central-1b"
+                        },
+                        "subnetOutpost": {},
+                        "subnetStatus": "Active"
+                    }
+                ]
+            },
+            "preferredMaintenanceWindow": "fri:03:42-fri:04:12",
+            "pendingModifiedValues": {},
+            "multiAZ": false,
+            "engineVersion": "5.6.10a",
+            "autoMinorVersionUpgrade": true,
+            "readReplicaDBInstanceIdentifiers": [],
+            "licenseModel": "general-public-license",
+            "optionGroupMemberships": [
+                {
+                    "optionGroupName": "default:aurora-5-6",
+                    "status": "in-sync"
+                }
+            ],
+            "publiclyAccessible": false,
+            "storageType": "aurora",
+            "dbInstancePort": 0,
+            "dBClusterIdentifier": "temporary",
+            "storageEncrypted": false,
+            "dbiResourceId": "db-B6INXW5CLUOTTDFQECQVVKZSDQ",
+            "cACertificateIdentifier": "rds-ca-2019",
+            "domainMemberships": [],
+            "copyTagsToSnapshot": false,
+            "monitoringInterval": 60,
+            "monitoringRoleArn": "arn:aws:iam::358845015454:role/rds-monitoring-role",
+            "promotionTier": 1,
+            "dBInstanceArn": "arn:aws:rds:eu-central-1:358845015454:db:temporary-instance-1",
+            "iAMDatabaseAuthenticationEnabled": false,
+            "performanceInsightsEnabled": false,
+            "deletionProtection": false,
+            "associatedRoles": [],
+            "httpEndpointEnabled": false
+        },
+        "requestID": "1af6b265-8df0-4ba6-a635-5e8981c74d78",
+        "eventID": "53cf6983-b2d4-4bc4-abe3-1cdb5cf60b7e",
+        "eventType": "AwsApiCall"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "version": "0",
+    "id": "c3d3964b-3c8f-9b3b-f1b0-df87688b0815",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.rds",
+    "account": "358845015454",
+    "time": "2020-02-27T13:45:58Z",
+    "region": "eu-central-1",
+    "resources": [],
+    "detail": {
+        "eventVersion": "1.05",
+        "userIdentity": {
+            "type": "IAMUser",
+            "principalId": "AIDAVHDGUMWPJW6SUVDWP",
+            "arn": "arn:aws:iam::358845015454:user/keresztesa",
+            "accountId": "358845015454",
+            "accessKeyId": "AKIAVHDGUMWPJ4NVBKRH",
+            "userName": "keresztesa"
+        },
+        "eventTime": "2020-02-27T13:45:58Z",
+        "eventSource": "rds.amazonaws.com",
+        "eventName": "CreateDBCluster",
+        "awsRegion": "eu-central-1",
+        "sourceIPAddress": "88.151.102.26",
+        "userAgent": "aws-cli/1.18.2 Python/3.8.1 Windows/10 botocore/1.15.2",
+        "requestParameters": {
+            "dBClusterIdentifier": "temporary",
+            "engine": "aurora-mysql",
+            "masterUsername": "keresztesa",
+            "masterUserPassword": "****",
+            "tags": [
+                {
+                    "key": "owner",
+                    "value": "keresztesa"
+                }
+            ]
+        },
+        "responseElements": {
+            "allocatedStorage": 1,
+            "availabilityZones": [
+                "eu-central-1a",
+                "eu-central-1b",
+                "eu-central-1c"
+            ],
+            "backupRetentionPeriod": 1,
+            "dBClusterIdentifier": "temporary",
+            "dBClusterParameterGroup": "default.aurora-mysql5.7",
+            "dBSubnetGroup": "default",
+            "status": "creating",
+            "endpoint": "temporary.cluster-ccukszjeuwt7.eu-central-1.rds.amazonaws.com",
+            "readerEndpoint": "temporary.cluster-ro-ccukszjeuwt7.eu-central-1.rds.amazonaws.com",
+            "multiAZ": false,
+            "engine": "aurora-mysql",
+            "engineVersion": "5.7.12",
+            "port": 3306,
+            "masterUsername": "keresztesa",
+            "preferredBackupWindow": "20:36-21:06",
+            "preferredMaintenanceWindow": "fri:03:23-fri:03:53",
+            "readReplicaIdentifiers": [],
+            "dBClusterMembers": [],
+            "vpcSecurityGroups": [
+                {
+                    "vpcSecurityGroupId": "sg-36b7325f",
+                    "status": "active"
+                }
+            ],
+            "hostedZoneId": "Z1RLNUO7B9Q6NB",
+            "storageEncrypted": false,
+            "dbClusterResourceId": "cluster-ZC744WTE5YXWPQZOVUT4Z273AE",
+            "dBClusterArn": "arn:aws:rds:eu-central-1:358845015454:cluster:temporary",
+            "associatedRoles": [],
+            "iAMDatabaseAuthenticationEnabled": false,
+            "clusterCreateTime": "Feb 27, 2020 1:45:58 PM",
+            "engineMode": "provisioned",
+            "deletionProtection": false,
+            "httpEndpointEnabled": false,
+            "copyTagsToSnapshot": false,
+            "crossAccountClone": false,
+            "domainMemberships": []
+        },
+        "requestID": "2f269640-133b-41ba-9b0b-d6c771ecf1fa",
+        "eventID": "06e507ee-14b6-42b0-b7c5-e16d42c5662d",
+        "eventType": "AwsApiCall"
+    }
+}

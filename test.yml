@@ -1,0 +1,7 @@
+# This is test file for RDS keep up running config. First level is the db's name, then weekdays and/or weekends must-be-running timerange.
+test-db:
+  weekdays: 7:00-23:00
+notexistingdb:
+  weekdays: 8:00-22:00
+  weekends: 8:00-13:00
+

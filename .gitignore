@@ -1,0 +1,5 @@
+.vscode
+.idea
+.~lock.*.csv#
+output.csv
+**/tmp.zip

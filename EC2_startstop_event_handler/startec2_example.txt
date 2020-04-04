@@ -1,0 +1,2 @@
+aws ec2 run-instances --image-id ami-0df0e7600ad0913a9 --count 1 --instance-type t2.micro --key-name keresztesa_keypair --tag-specifications "ResourceType=instance,Tags=[{Key=owner,Value=keresztesa}]"
+

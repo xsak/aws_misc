@@ -1,0 +1,1 @@
+aws rds create-db-cluster --db-cluster-identifier temporary --engine aurora-mysql --master-username keresztesa --master-user-password Rekettye73 --tags "Key=owner,Value=keresztesa"

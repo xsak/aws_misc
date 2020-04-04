@@ -1,0 +1,4 @@
+.vscode
+venv-check-rds-tags
+.idea
+__pycache__

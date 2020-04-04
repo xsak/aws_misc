@@ -1,0 +1,34 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowToCreateCloudwatchLogsForLambdaFunction",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:aws:logs:eu-central-1:358845015454:log-group:/aws/lambda/EC2_startstop_event_handler:*"
+            ]
+        },
+        {
+            "Sid": "AllowCreateLogGroupsForLambdaFunction",
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:eu-central-1:358845015454:*"
+        },
+        {
+            "Sid": "AllowToTagEC2InstancesForLambdaFunction",
+            "Effect": "Allow",
+            "Action": "ec2:CreateTags",
+            "Resource": "arn:aws:ec2:*:*:instance/*"
+        },
+        {
+            "Sid": "AllowToTagRDSClustersForLambdaFunction",
+            "Effect": "Allow",
+            "Action": "rds:AddTagsToResource",
+            "Resource": "*"
+        }
+    ]
+}

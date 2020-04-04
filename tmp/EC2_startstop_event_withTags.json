@@ -1,0 +1,204 @@
+
+{
+    "version": "0",
+    "id": "813dbf013dc-8532-c92f-8a54-cfc1388887b3",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.ec2",
+    "account": "48752ö927349",
+    "time": "2020-02-26T11:51:52Z",
+    "region": "eu-central-1",
+    "resources": [],
+    "detail":
+    {
+        "eventVersion": "1.05",
+        "userIdentity":
+        {
+            "type": "IAMUser",
+            "principalId": "AIDAMWU6SHDGWPUVDPJWV",
+            "arn": "arn:aws:iam::48752ö927349:user/keresztesa",
+            "accountId": "48752ö927349",
+            "accessKeyId": "AKIAVMWPJDGUKR4NVBHH",
+            "userName": "keresztesa"
+        },
+        "eventTime": "2020-02-26T11:51:52Z",
+        "eventSource": "ec2.amazonaws.com",
+        "eventName": "RunInstances",
+        "awsRegion": "eu-central-1",
+        "sourceIPAddress": "98.242.110.12",
+        "userAgent": "aws-cli/1.18.2 Python/3.8.1 Windows/10 botocore/1.15.2",
+        "requestParameters":
+        {
+            "instancesSet":
+            {
+                "items": [
+                    {
+                        "imageId": "ami-0d07600ada913ef09",
+                        "minCount": 1,
+                        "maxCount": 1,
+                        "keyName": "keresztesa_keypair"
+                    }
+                ]
+            },
+            "instanceType": "t2.micro",
+            "blockDeviceMapping": {},
+            "monitoring":
+            {
+                "enabled": "False"
+            },
+            "disableApiTermination": "False",
+            "tagSpecificationSet":
+            {
+                "items": [
+                    {
+                        "resourceType": "instance",
+                        "tags": [
+                            {
+                                "key": "owner",
+                                "value": "keresztesa"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "responseElements":
+        {
+            "requestId": "02ea2843-1e45f-a2a7-94e6-ceede3524fe",
+            "reservationId": "r-0243f60f92e975e0a",
+            "ownerId": "48752ö927349",
+            "groupSet": {},
+            "instancesSet":
+            {
+                "items": [
+                    {
+                        "instanceId": "i-06909f2512d0831f3",
+                        "imageId": "ami-0ae7600ad0913df09",
+                        "instanceState":
+                        {
+                            "code": 0,
+                            "name": "pending"
+                        },
+                        "privateDnsName": "ip-121-21-12-212.eu-central-1.compute.internal",
+                        "keyName": "keresztesa_keypair",
+                        "amiLaunchIndex": 0,
+                        "productCodes": {},
+                        "instanceType": "t2.micro",
+                        "launchTime": 1582717912000,
+                        "placement":
+                        {
+                            "availabilityZone": "eu-central-1b",
+                            "tenancy": "default"
+                        },
+                        "monitoring":
+                        {
+                            "state": "disabled"
+                        },
+                        "subnetId": "subnet-07e3367c",
+                        "vpcId": "vpc-534fe93a",
+                        "privateIpAddress": "121.21.12.212",
+                        "stateReason":
+                        {
+                            "code": "pending",
+                            "message": "pending"
+                        },
+                        "architecture": "x86_64",
+                        "rootDeviceType": "ebs",
+                        "rootDeviceName": "/dev/xvda",
+                        "blockDeviceMapping": {},
+                        "virtualizationType": "hvm",
+                        "hypervisor": "xen",
+                        "tagSet":
+                        {
+                            "items": [
+                                {
+                                    "key": "owner",
+                                    "value": "keresztesa"
+                                }
+                            ]
+                        },
+                        "groupSet":
+                        {
+                            "items": [
+                                {
+                                    "groupId": "sg-373732526b7325f",
+                                    "groupName": "default"
+                                }
+                            ]
+                        },
+                        "sourceDestCheck": "True",
+                        "networkInterfaceSet":
+                        {
+                            "items": [
+                                {
+                                    "networkInterfaceId": "eni-09e63c8d15d9dcc4d",
+                                    "subnetId": "subnet-067e733c",
+                                    "vpcId": "vpc-53934fea",
+                                    "ownerId": "48752ö927349",
+                                    "status": "in-use",
+                                    "macAddress": "06:06:e1:a8:c2:ce",
+                                    "privateIpAddress": "121.21.12.212",
+                                    "privateDnsName": "ip-121-21-12-212.eu-central-1.compute.internal",
+                                    "sourceDestCheck": "True",
+                                    "interfaceType": "interface",
+                                    "groupSet":
+                                    {
+                                        "items": [
+                                            {
+                                                "groupId": "sg-3256b73f",
+                                                "groupName": "default"
+                                            }
+                                        ]
+                                    },
+                                    "attachment":
+                                    {
+                                        "attachmentId": "eni-attach-0ec1df1525bbe01bd",
+                                        "deviceIndex": 0,
+                                        "status": "attaching",
+                                        "attachTime": 1582717912000,
+                                        "deleteOnTermination": "True"
+                                    },
+                                    "privateIpAddressesSet":
+                                    {
+                                        "item": [
+                                            {
+                                                "privateIpAddress": "121.21.12.212",
+                                                "privateDnsName": "ip-121-21-12-212.eu-central-1.compute.internal",
+                                                "primary": "True"
+                                            }
+                                        ]
+                                    },
+                                    "ipv6AddressesSet": {},
+                                    "tagSet": {}
+                                }
+                            ]
+                        },
+                        "ebsOptimized": "False",
+                        "cpuOptions":
+                        {
+                            "coreCount": 1,
+                            "threadsPerCore": 1
+                        },
+                        "capacityReservationSpecification":
+                        {
+                            "capacityReservationPreference": "open"
+                        },
+                        "enclaveOptions":
+                        {
+                            "enabled": "False"
+                        },
+                        "metadataOptions":
+                        {
+                            "state": "pending",
+                            "httpTokens": "optional",
+                            "httpPutResponseHopLimit": 1,
+                            "httpEndpoint": "enabled"
+                        }
+                    }
+                ]
+            }
+        },
+        "requestID": "02842ea3-1f55-470a-960f-c079feed008e",
+        "eventID": "81ffd7b1-06f2-a41e-a96c-72587cbf1f8d",
+        "eventType": "AwsApiCall"
+    }
+}
