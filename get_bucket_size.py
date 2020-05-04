@@ -1,11 +1,10 @@
 import sys
-import boto
+import boto3
 
 
 # based on http://www.quora.com/Amazon-S3/What-is-the-fastest-way-to-measure-the-total-size-of-an-S3-bucket
-
 # assumes you've already configured your access id & secret key
-s3 = boto.connect_s3()
+s3 = boto3.connect_s3()
 
 
 def get_bucket_size(bucket_name):
@@ -21,23 +20,23 @@ def get_bucket_size(bucket_name):
         total_bytes += key.size
         n += 1
         if n % 2000 == 0:
-            print n
+            print(n)
     total_gigs = total_bytes/1024/1024/1024
 
-    print "%s: %i GB, %i objects" % (bucket_name, total_gigs, n)
+    print(f"{bucket_name}: {total_gigs} GB, {n} objects")
 
     return total_gigs, n
 
 def get_size_of_bucket():
     bk = conn.get_bucket('my_bucket_name')
     key = bk.lookup('my_key_name')
-    print key.size
+    print(key.size)
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         bucket_list = sys.argv[1:]
     else:
-        print "Add the buckets to measure as parameter list!"
+        print("Add the buckets to measure as parameter list!")
 
     bucket_sizes = []
 
@@ -45,6 +44,6 @@ if __name__ == '__main__':
         size, object_count = get_bucket_size(bucket_name)
         bucket_sizes.append(dict(name=bucket_name, size=size, count=object_count))
 
-    print "\nTotals:"
+    print("\nTotals:")
     for bucket_size in bucket_sizes:
-        print "%s: %iGB, %i objects" % (bucket_size["name"], bucket_size["size"], bucket_size["count"])
+        print(f"{bucket_size["name"]}: {bucket_size["size"]}GB, {bucket_size["count"]} objects")
